@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Suite" parallel="tests" verbose="1" thread-count="2">
+    <test name="Pixel_2">
+        <listeners>
+<!--            <listener class-name="extentListeners.ExtentListeners"/>-->
+            <listener class-name="extentListeners.TestListener"/>
+
+        </listeners>
+        <parameter name="emulator" value="true" />
+        <parameter name="platformVersion" value="14.4"/>
+        <parameter name="platformName" value="Android" />
+        <parameter name="udid" value="emulator-5554" />
+        <parameter name="deviceName" value="Pixel_4_XL_API_30" />
+        <parameter name="systemPort" value="10000" />
+        <parameter name="chromeDriverPort" value="11000" />
+        <classes>
+            <class name="testcases.LoginPageTests"/>
+        </classes>
+    </test>
+
+    <test name="iPhone 12 Pro">
+        <listeners>
+<!--            <listener class-name="extentListeners.ExtentListeners"/>-->
+            <listener class-name="extentListeners.TestListener"/>
+        </listeners>
+        <parameter name="platformVersion" value="14.4"/>
+        <parameter name="platformName" value="iOS" />
+        <parameter name="udid" value="1886B8E5-7258-4A37-A9A2-728253663533" />
+        <parameter name="deviceName" value="iPhone 12 Pro Max" />
+        <parameter name="wdaLocalPort" value="8101" />
+        <parameter name="webkitDebugProxyPort" value="11001" />
+        <classes>
+            <class name="testcases.LoginPageTests"/>
+        </classes>
+    </test>
+</suite> <!-- Suite -->
