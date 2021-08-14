@@ -8,7 +8,6 @@ import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.nativekey.AndroidKey;
 import io.appium.java_client.android.nativekey.KeyEvent;
-import org.apache.log4j.LogSF;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
@@ -89,10 +88,10 @@ public class ScreenBase {
         return el.getAttribute(attribute);
     }
 
-    public String getText(WebElement el, String msg, String getPlatform) {
-        System.out.println("Platform " + driver.getPlatformName());
+    public String getText(WebElement el, String msg) {
+        System.out.println("platformName in getText " + driver.getPlatformName());
         String txt = null;
-        switch (getPlatform) {
+        switch (System.getProperty("platformName")) {
             case "Android":
                 txt = getAttribute(el, "text");
                 break;
