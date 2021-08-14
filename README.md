@@ -30,3 +30,5 @@ Open the solution
 Rebuild
 
 Run the test
+
+### *Known issue: parallel not running on Android and iOS Simultaneously.
