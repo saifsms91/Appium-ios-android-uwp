@@ -18,14 +18,14 @@ public class ExtentReport {
             ExtentSparkReporter html = new ExtentSparkReporter("Extent.html");
             html.config().setDocumentTitle("Appium Framework");
             html.config().setTheme(Theme.STANDARD);
-            html.config().setEncoding("utf-8");
             html.config().setReportName("SauceLabs");
+            html.config().setEncoding("utf-8");
             extent = new ExtentReports();
             extent.attachReporter(html);
-            extent = new ExtentReports();
-            extent.setSystemInfo("Automation Tester", "Saif Siddiqui");
-            extent.setSystemInfo("Organization", "Billennium");
+            extent.setSystemInfo("Automation Tester", "Saif");
+            extent.setSystemInfo("Organization", "Tets");
             extent.setSystemInfo("Build no", "4.1.2");
+
         }
 
         return extent;
